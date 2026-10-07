@@ -1,0 +1,313 @@
+.settings-page {
+  padding: 24px;
+}
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.settings-header p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.settings-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.settings-card h2 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 20px;
+}
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-row h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.setting-row p {
+  margin: 0;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.setting-row button {
+  border: none;
+  background: #160f76;
+  color: white;
+
+  padding: 9px 18px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.setting-row button:hover {
+  background: #2419a3;
+  transform: translateY(-1px);
+}
+
+.settings-modal-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+
+  padding: 20px;
+}
+
+.settings-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 28px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+  animation: settingsModalOpen 0.2s ease;
+}
+
+@keyframes settingsModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-modal h2 {
+  margin: 0 0 24px;
+
+  color: #111827;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+.modal-close {
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 28px;
+
+  color: #6b7280;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #111827;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-form label {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.settings-form input,
+.settings-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  padding: 11px 12px;
+
+  margin-bottom: 16px;
+
+  font-size: 14px;
+
+  font-family: inherit;
+
+  outline: none;
+}
+
+.settings-form input:focus,
+.settings-form textarea:focus {
+  border-color: #160f76;
+
+  box-shadow: 0 0 0 2px rgba(22, 15, 118, 0.08);
+}
+
+.settings-form textarea {
+  resize: vertical;
+}
+
+.settings-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.checkbox-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+
+  accent-color: #160f76;
+}
+
+.save-button {
+  width: 100%;
+
+  border: none;
+
+  background: #160f76;
+
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  margin-top: 8px;
+
+  transition: 0.2s;
+}
+
+.save-button:hover {
+  background: #2419a3;
+}
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 16px;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+
+  .setting-row {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .setting-row button {
+    flex-shrink: 0;
+  }
+
+  .settings-modal {
+    padding: 22px;
+
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .setting-row {
+    flex-direction: column;
+  }
+
+  .setting-row button {
+    width: 100%;
+  }
+
+  .settings-header h1 {
+    font-size: 24px;
+  }
+}

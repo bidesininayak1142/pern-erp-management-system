@@ -1,0 +1,17 @@
+{
+  "name": "pern-project",
+  "version": "1.0.0",
+  "description": "Full-Stack PERN ERP System",
+  "main": "start-dev.js",
+  "scripts": {
+    "start": "node start-dev.js",
+    "dev": "node start-dev.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev"
+  },
+  "keywords": ["pern", "erp", "react", "postgresql", "express", "node"],
+  "author": "",
+  "license": "ISC"
+}

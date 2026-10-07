@@ -1,0 +1,149 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.table-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-card-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.table-card-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.table-card-header span {
+  padding: 7px 13px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.table-card > div:last-child {
+  overflow-x: auto;
+}
+
+.table-card table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.table-card thead {
+  background: #f8fafc;
+}
+
+.table-card th {
+  padding: 14px 18px;
+  text-align: left;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.table-card td {
+  padding: 15px 18px;
+  color: #374151;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table-card tbody tr:hover {
+  background: #f8fafc;
+}
+
+.table-card tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-card td:first-child {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.table-card td:nth-child(2) {
+  color: #172033;
+  font-weight: 600;
+}
+
+.table-card td:nth-child(3) {
+  font-weight: 600;
+}
+
+.table-card td:nth-child(4) {
+  font-weight: 600;
+  color: #172033;
+}
+.table-card td:nth-child(5) {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.table-card h3 {
+  color: #374151;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.table-card h3 + p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .table-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .table-card th,
+  .table-card td {
+    padding: 12px 14px;
+  }
+}
